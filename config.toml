@@ -1,0 +1,40 @@
+baseURL = "http://someguys.blog/"
+languageCode = "en-us"
+title = "Some Guys Blog"
+theme = "beautifulhugo"
+
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  subtitle = "Yet another tech blog of some guy"
+  mainSections = ["posts"]
+  logo = "img/avatar-icon.png" # Expecting square dimensions
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = false
+  readingTime = false
+  wordCount = false
+  useHLJS = true
+  socialShare = false
+  delayDisqus = true
+  showRelatedPosts = true
+  hideAuthor = true
+  staticDir = ["static"]
+
+[Author]
+  name = "Britt Treece"
+  github = "abtreece"
+  twitter = "abtreece"
+  linkedin = "abtreece"
+
+
+[[menu.main]]
+    name = "Home"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "Talks"
+    url = "pages/talks"
+    weight = 2
