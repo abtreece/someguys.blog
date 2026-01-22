@@ -41,7 +41,7 @@ Use `<!--more-->` to define the excerpt break point.
 ## Deployment
 
 - Hosted on Netlify with automatic deploys from main branch
-- Hugo version: 0.62.2 (defined in netlify.toml)
+- Hugo version: 0.145.0 (defined in netlify.toml)
 - Build command: `hugo --gc --minify`
 - Output directory: `public/`
 

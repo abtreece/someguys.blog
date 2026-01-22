@@ -4,10 +4,9 @@ title = "Some Guys Blog"
 theme = "beautifulhugo"
 
 [Params]
-#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
   subtitle = "Yet another tech blog of some guy"
   mainSections = ["posts"]
-  logo = "img/avatar-icon.png" # Expecting square dimensions
+  logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
@@ -17,17 +16,14 @@ theme = "beautifulhugo"
   wordCount = false
   useHLJS = true
   socialShare = false
-  delayDisqus = true
   showRelatedPosts = true
   hideAuthor = true
-  staticDir = ["static"]
 
 [Author]
   name = "Britt Treece"
   github = "abtreece"
-  twitter = "abtreece"
+  bluesky = "abtreece.bsky.social"
   linkedin = "abtreece"
-
 
 [[menu.main]]
     name = "Home"
