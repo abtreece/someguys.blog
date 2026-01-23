@@ -20,7 +20,7 @@ theme = "beautifulhugo"
   showRelatedPosts = true
   hideAuthor = true
 
-[Author]
+[params.author]
   name = "Britt Treece"
   github = "abtreece"
   bluesky = "abtreece.bsky.social"
