@@ -4,6 +4,7 @@ title = "Some Guys Blog"
 theme = "beautifulhugo"
 
 [Params]
+  since = 2017
   subtitle = "Yet another tech blog of some guy"
   mainSections = ["posts"]
   logo = "img/avatar-icon.png"
