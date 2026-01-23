@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Some Guys Blog"
 theme = "beautifulhugo"
 
-[Params]
+[params]
   since = 2017
   subtitle = "Yet another tech blog of some guy"
   mainSections = ["posts"]
