@@ -1,7 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "schedule": ["before 9am on monday"],
+  "extends": [
+    "config:recommended"
+  ],
+  "schedule": [
+    "before 9am on monday"
+  ],
   "timezone": "America/Chicago",
   "git-submodules": {
     "enabled": true
@@ -9,8 +13,12 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^netlify\\.toml$"],
-      "matchStrings": ["HUGO_VERSION\\s*=\\s*\"(?<currentValue>[^\"]+)\""],
+      "managerFilePatterns": [
+        "/^netlify\\.toml$/"
+      ],
+      "matchStrings": [
+        "HUGO_VERSION\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+      ],
       "depNameTemplate": "gohugoio/hugo",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>.*)$"
