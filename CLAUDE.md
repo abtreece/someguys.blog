@@ -19,11 +19,14 @@ hugo --gc --minify
 hugo new posts/YYYY-MM-DD-post-title.md
 ```
 
-## Content Structure
+## Project Structure
 
 - `content/posts/` - Blog posts (use date prefix: `YYYY-MM-DD-title.md`)
 - `content/pages/` - Static pages (e.g., talks.md)
 - `static/img/` - Images and static assets
+- `layouts/partials/` - Theme overrides
+- `hugo.toml` - Site configuration
+- `netlify.toml` - Netlify build and deploy settings
 
 ## Post Front Matter
 
@@ -33,10 +36,18 @@ Posts use YAML front matter:
 layout: post
 title: Post Title
 date: YYYY-MM-DD
+tags: ["tag1", "tag2"]
 ---
 ```
 
 Use `<!--more-->` to define the excerpt break point.
+
+## Configuration
+
+Key settings in `hugo.toml`:
+- Theme: beautifulhugo
+- Author info and social links in `[params.author]`
+- Menu items in `[[menu.main]]`
 
 ## Deployment
 
@@ -51,3 +62,11 @@ The beautifulhugo theme is included as a git submodule at `themes/beautifulhugo`
 ```bash
 git submodule update --init --recursive
 ```
+
+Theme customizations go in `layouts/` to override theme templates.
+
+## Git Commits
+
+- Use conventional commits: `feat:`, `fix:`, `docs:`, `chore:`
+- Keep commit messages concise and descriptive
+- Do NOT add Co-Authored-By lines to commits
