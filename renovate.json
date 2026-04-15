@@ -9,7 +9,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^netlify\\.toml$"],
+      "managerFilePatterns": [
+        "/^netlify\\.toml$/"
+      ],
       "matchStrings": ["HUGO_VERSION\\s*=\\s*\"(?<currentValue>[^\"]+)\""],
       "depNameTemplate": "gohugoio/hugo",
       "datasourceTemplate": "github-releases",
