@@ -22,31 +22,76 @@
   color: var(--accent);
 }
 
-/* Between post entries on listing pages. */
+/* Between post entries on listing pages. The hairline rule and the title
+   share a horizontal inset so the rule visually starts where the text
+   starts — not at the column edge. */
 .post-entry {
-  border-bottom: 1px solid var(--rules);
+  position: relative;
   background: transparent;
-  padding: 28px 0;
+  padding: 36px var(--entry-inset);
+  border: none;
   border-radius: 0;
   box-shadow: none;
+  margin: 0;
+  transition: none;
 }
 
-.post-entry:hover {
+.post-entry::after {
+  content: "";
+  position: absolute;
+  left: var(--entry-inset);
+  right: var(--entry-inset);
+  bottom: 0;
+  height: 1px;
+  background: var(--rules);
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
   background: transparent;
   box-shadow: none;
   transform: none;
+  border-color: transparent;
 }
 
-.post-entry:last-child {
-  border-bottom: none;
+.post-entry:last-child::after {
+  display: none;
 }
 
+/* Home-page hero entry. Gets more air than subsequent listings — breaks
+   the uniform-padding monotony and gives the page an opening register. */
 .first-entry {
-  border-bottom: 1px solid var(--rules);
   background: transparent;
-  padding: 32px 0 40px;
+  padding: 56px var(--entry-inset) 64px;
+  border: none;
   border-radius: 0;
   box-shadow: none;
+  margin: 0;
+  position: relative;
+}
+
+.first-entry::after {
+  content: "";
+  position: absolute;
+  left: var(--entry-inset);
+  right: var(--entry-inset);
+  bottom: 0;
+  height: 1px;
+  background: var(--rules);
+}
+
+/* The home hero duplicates the wordmark by default. Suppress the H1 and
+   let the tagline carry the opening, set larger and looser. */
+.first-entry .entry-header h1 {
+  display: none;
+}
+
+.first-entry .entry-content {
+  font-size: 1.18rem;
+  line-height: 1.55;
+  color: var(--content);
+  margin: 0 0 20px;
+  max-width: 56ch;
 }
 
 /* Horizontal rule in post body — same hairline. */
