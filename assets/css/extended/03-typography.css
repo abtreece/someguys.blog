@@ -94,10 +94,6 @@ samp {
   line-height: 1.6;
 }
 
-.post-content pre {
-  font-size: 0.95rem; /* ~16px — block code reads bigger than inline */
-}
-
 .post-content code {
   padding: 1px 6px;
   border-radius: 3px;
@@ -106,6 +102,7 @@ samp {
 }
 
 .post-content pre {
+  font-size: 0.95rem; /* ~16px so block code reads bigger than inline */
   padding: 16px 20px;
   border-radius: 4px;
   background: var(--code-block-bg);

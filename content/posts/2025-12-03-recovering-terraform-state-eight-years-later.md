@@ -2,7 +2,7 @@
 layout: post
 title: Recovering Terraform State, Eight Years Later
 date: 2025-12-03
-tags: ["Terraform"]
+tags: ["terraform"]
 ---
 
 Back in 2017 I wrote about [recovering orphaned Terraform state](/posts/2017-04-26-recovering-terraform-state/) with the `import` command. That post is still up because the situation is still the same: somebody created infra without managing state, somebody else has to bring it back under control, and you're the somebody else. What's changed is the tooling. Three things, mostly.<!--more-->
