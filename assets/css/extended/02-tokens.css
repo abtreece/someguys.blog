@@ -17,9 +17,10 @@
   --rules: #D8CFBE;
   --muted: #6B6155;
 
-  /* Layout — editorial column. Inter has wide apertures, so the column
-     opens to ~84ch at 17px before reading too long. */
-  --main-width: 780px;
+  /* Layout — editorial column. 880px lands at ~103ch for Inter at 17px,
+     the upper bound of comfortable prose reading; gives the column real
+     presence on wide displays without sacrificing legibility. */
+  --main-width: 880px;
   --content-gap: 24px;
   --gap: 32px;
   --entry-inset: 28px;

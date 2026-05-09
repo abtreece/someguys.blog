@@ -85,12 +85,11 @@
   display: none;
 }
 
-/* Home-page hero entry. Tagline + socials only — kept tight so the
-   listing surfaces above the fold rather than getting buried under
-   dead air. Replace with real opening copy when voice is ready. */
+/* Home-page hero entry. The tagline carries the opening as a display-
+   weight statement; type does the work, no decoration needed. */
 .first-entry {
   background: transparent;
-  padding: 28px var(--entry-inset) 36px;
+  padding: 80px var(--entry-inset) 88px;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -115,11 +114,18 @@
 }
 
 .first-entry .entry-content {
-  font-size: 1.18rem;
-  line-height: 1.55;
+  font-size: 2.35rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 500;
   color: var(--content);
-  margin: 0 0 16px;
-  max-width: 56ch;
+  margin: 0;
+  max-width: 22ch;
+}
+
+.first-entry .entry-content p {
+  margin: 0;
+  font-weight: inherit;
 }
 
 /* Give the post-meta on single posts a touch more breathing room from
