@@ -59,7 +59,7 @@ buildExpired = false
 
   [params.homeInfoParams]
     Content = """
-At 2am, in the middle of an outage, the answer is almost always on somebody's blog: half-formatted, dated three years ago, addressing the exact thing currently on fire. I've spent twenty years being saved by posts like that, and an equal amount of time writing them on internal wikis nobody outside the company will ever see. This is where I'm writing some on the open internet.
+At 2am during an outage, the answer is almost always on somebody's blog: half-formatted, three years old, addressing the exact thing on fire. Twenty years in, I've written my share of those posts too, mostly on internal wikis nobody else can read. This is where I'm writing the public ones.
 """
 
   [[params.socialIcons]]
