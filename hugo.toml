@@ -86,8 +86,3 @@ buildExpired = false
     name = "Posts"
     url = "/posts/"
     weight = 2
-
-[[menu.main]]
-    name = "Talks"
-    url = "/pages/talks/"
-    weight = 3
