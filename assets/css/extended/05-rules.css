@@ -114,12 +114,13 @@
 }
 
 .first-entry .entry-content {
-  font-size: 2.35rem;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  font-weight: 400;
   color: var(--content);
   margin: 0;
+  max-width: 52ch;
 }
 
 .first-entry .entry-content p {

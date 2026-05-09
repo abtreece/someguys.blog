@@ -58,8 +58,9 @@ buildExpired = false
     enabled = false
 
   [params.homeInfoParams]
-    Title = "Some Guys Blog."
-    Content = "Yet another tech blog of some guy."
+    Content = """
+At 2am, in the middle of an outage, the answer is almost always on somebody's blog: half-formatted, dated three years ago, addressing the exact thing currently on fire. I've spent twenty years being saved by posts like that, and an equal amount of time writing them on internal wikis nobody outside the company will ever see. This is where I'm writing some on the open internet.
+"""
 
   [[params.socialIcons]]
     name = "github"
