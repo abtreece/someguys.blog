@@ -70,6 +70,10 @@ buildExpired = false
     url = "https://www.linkedin.com/in/abtreece"
 
   [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/abtreece"
+
+  [[params.socialIcons]]
     name = "bluesky"
     url = "https://bsky.app/profile/abtreece.bsky.social"
 
