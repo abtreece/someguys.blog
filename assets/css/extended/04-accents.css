@@ -1,0 +1,117 @@
+/* Accent rules. Accent appears ONLY on:
+   - Links (body and nav)
+   - Post category labels (tags)
+   - Wordmark trailing period
+   - Code syntax: keywords, strings, values
+   Nowhere else. */
+
+/* Body and post links. */
+.post-content a,
+.post-content a:visited {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent);
+}
+
+.post-content a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Nav links — accent on hover only; default uses primary for restraint. */
+.menu a:hover,
+.menu .active {
+  color: var(--accent);
+}
+
+/* Post tags / category labels. */
+.post-tags li a {
+  background: transparent;
+  border: 1px solid var(--rules);
+  color: var(--accent);
+  border-radius: 0;
+  padding: 4px 10px;
+}
+
+.post-tags li a:hover {
+  border-color: var(--accent);
+}
+
+/* Wordmark — "Some Guys Blog" (no period in title). Append accent period via
+   pseudo-element so it stays in the wordmark even if the label text changes. */
+.logo a {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--primary);
+}
+
+.logo a::after {
+  content: ".";
+  color: var(--accent);
+  margin-left: 0.5px;
+}
+
+/* Code syntax. PaperMod uses Hugo's chroma classes (.k = keyword, .s = string,
+   .m / .mi / .mf = number, .nb = builtin). Single-accent rule for launch. */
+.post-content .chroma .k,
+.post-content .chroma .kc,
+.post-content .chroma .kd,
+.post-content .chroma .kn,
+.post-content .chroma .kr,
+.post-content .chroma .kt,
+.post-content .chroma .s,
+.post-content .chroma .s1,
+.post-content .chroma .s2,
+.post-content .chroma .sb,
+.post-content .chroma .sc,
+.post-content .chroma .sd,
+.post-content .chroma .sh,
+.post-content .chroma .si,
+.post-content .chroma .sx,
+.post-content .chroma .sr,
+.post-content .chroma .ss,
+.post-content .chroma .m,
+.post-content .chroma .mb,
+.post-content .chroma .mf,
+.post-content .chroma .mh,
+.post-content .chroma .mi,
+.post-content .chroma .mo,
+.post-content .chroma .il,
+.post-content .chroma .nb,
+.post-content .chroma .bp {
+  color: var(--accent);
+}
+
+.post-content .chroma .c,
+.post-content .chroma .c1,
+.post-content .chroma .cm,
+.post-content .chroma .cp,
+.post-content .chroma .cs {
+  color: var(--muted);
+  font-style: normal;
+}
+
+.post-content .chroma .n,
+.post-content .chroma .na,
+.post-content .chroma .nc,
+.post-content .chroma .nd,
+.post-content .chroma .ne,
+.post-content .chroma .nf,
+.post-content .chroma .ni,
+.post-content .chroma .nl,
+.post-content .chroma .nn,
+.post-content .chroma .no,
+.post-content .chroma .nv,
+.post-content .chroma .o,
+.post-content .chroma .ow,
+.post-content .chroma .p,
+.post-content .chroma .err {
+  color: var(--content);
+}
+
+/* Defeat chroma background (we already set .post-content pre background). */
+.post-content .chroma {
+  background: transparent !important;
+}

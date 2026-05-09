@@ -1,0 +1,78 @@
+/* Hairline rules. Use only as section separators between major regions —
+   not within body content. 1px, low contrast. */
+
+.header {
+  border-bottom: 1px solid var(--rules);
+}
+
+.footer {
+  border-top: 1px solid var(--rules);
+  color: var(--muted);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 500;
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+/* Between post entries on listing pages. */
+.post-entry {
+  border-bottom: 1px solid var(--rules);
+  background: transparent;
+  padding: 28px 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.post-entry:hover {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.post-entry:last-child {
+  border-bottom: none;
+}
+
+.first-entry {
+  border-bottom: 1px solid var(--rules);
+  background: transparent;
+  padding: 32px 0 40px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Horizontal rule in post body — same hairline. */
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--rules);
+  margin: 3em 0;
+}
+
+/* Override PaperMod's default boxy entry style — we want editorial flow. */
+.post-entry .entry-content {
+  color: var(--content);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 8px 0;
+}
+
+.entry-header h2,
+.entry-header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.entry-footer {
+  color: var(--muted);
+  margin-top: 8px;
+}

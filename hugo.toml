@@ -1,37 +1,93 @@
 baseURL = "https://someguys.blog/"
 locale = "en-us"
 title = "Some Guys Blog"
-theme = "beautifulhugo"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+  [markup.goldmark.renderer]
+    unsafe = true
 
 [params]
+  env = "production"
+  description = "Yet another tech blog of some guy."
+  author = "Britt Treece"
   since = 2017
-  subtitle = "Yet another tech blog of some guy"
   mainSections = ["posts"]
-  logo = "img/avatar-icon.png"
-  favicon = "img/favicon.ico"
-  dateFormat = "January 2, 2006"
-  commit = false
-  rss = true
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = false
+  ShowWordCount = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = false
   comments = false
-  readingTime = false
-  wordCount = false
-  useHLJS = true
-  socialShare = false
-  showRelatedPosts = true
-  hideAuthor = true
 
-[params.author]
-  name = "Britt Treece"
-  github = "abtreece"
-  bluesky = "abtreece.bsky.social"
-  linkedin = "abtreece"
+  # Wordmark. Rendered as plain text by PaperMod; the trailing period is
+  # appended via CSS ::after so it can carry the accent color.
+  [params.label]
+    text = "Some Guys Blog"
+
+  [params.assets]
+    disableHLJS = true
+    disableFingerprinting = false
+    favicon = "/img/favicon.ico"
+    favicon16x16 = "/img/favicon.ico"
+    favicon32x32 = "/img/favicon.ico"
+    apple_touch_icon = "/img/avatar-icon.png"
+
+  [params.profileMode]
+    enabled = false
+
+  [params.homeInfoParams]
+    Title = "Some Guys Blog."
+    Content = "Yet another tech blog of some guy."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/abtreece"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/abtreece"
+
+  [[params.socialIcons]]
+    name = "bluesky"
+    url = "https://bsky.app/profile/abtreece.bsky.social"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
 
 [[menu.main]]
     name = "Home"
-    url = ""
+    url = "/"
     weight = 1
 
 [[menu.main]]
-    name = "Talks"
-    url = "pages/talks"
+    name = "Posts"
+    url = "/posts/"
     weight = 2
+
+[[menu.main]]
+    name = "Talks"
+    url = "/pages/talks/"
+    weight = 3
