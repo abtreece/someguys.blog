@@ -90,8 +90,8 @@ kbd,
 samp {
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.82rem; /* ~14px */
-  line-height: 1.65;
+  font-size: 0.92rem; /* ~15.6px */
+  line-height: 1.6;
 }
 
 .post-content code {
@@ -102,6 +102,7 @@ samp {
 }
 
 .post-content pre {
+  font-size: 0.95rem; /* ~16px so block code reads bigger than inline */
   padding: 16px 20px;
   border-radius: 4px;
   background: var(--code-block-bg);

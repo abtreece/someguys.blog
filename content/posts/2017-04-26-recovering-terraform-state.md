@@ -5,6 +5,8 @@ date: 2017-04-26
 tags: ["terraform"]
 ---
 
+*This was written in 2017 when `terraform import` was the only option. The toolkit looks different now; see [Recovering Terraform State, Eight Years Later](/posts/2025-12-03-recovering-terraform-state-eight-years-later/) for what I'd do today.*
+
 Here's the scenario... you have documented the steps for creating new infrastructure using Terraform including ensuring that state files are dealt with properly (remote in AWS S3). However, at some point those directions aren't followed and you now have infrastructure that is orphaned with no state. What do you do?<!--more-->
 
 The only answer is to get familiar with the `import` command of Terraform
