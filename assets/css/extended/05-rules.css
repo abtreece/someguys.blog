@@ -58,11 +58,12 @@
   display: none;
 }
 
-/* Home-page hero entry. Gets more air than subsequent listings — breaks
-   the uniform-padding monotony and gives the page an opening register. */
+/* Home-page hero entry. Tagline + socials only — kept tight so the
+   listing surfaces above the fold rather than getting buried under
+   dead air. Replace with real opening copy when voice is ready. */
 .first-entry {
   background: transparent;
-  padding: 56px var(--entry-inset) 64px;
+  padding: 28px var(--entry-inset) 36px;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -90,8 +91,18 @@
   font-size: 1.18rem;
   line-height: 1.55;
   color: var(--content);
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   max-width: 56ch;
+}
+
+/* Give the post-meta on single posts a touch more breathing room from
+   the H1 above it — currently sits ~4px below the title. */
+.post-single .post-header {
+  margin: 24px auto;
+}
+
+.post-single .post-meta {
+  margin-top: 10px;
 }
 
 /* Horizontal rule in post body — same hairline. */

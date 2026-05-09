@@ -48,9 +48,12 @@
 }
 
 .logo a::after {
+  /* Pull the period in tight against "g". Inter's "." has a wide left
+     sidebearing inside its em box; -7px lands it ~1px right of the "g". */
   content: ".";
   color: var(--accent);
-  margin-left: 0.5px;
+  margin-left: -7px;
+  letter-spacing: 0;
 }
 
 /* Code syntax. PaperMod uses Hugo's chroma classes (.k = keyword, .s = string,
