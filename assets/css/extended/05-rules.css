@@ -12,6 +12,11 @@
   text-transform: uppercase;
   letter-spacing: 0.13em;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px var(--entry-inset);
 }
 
 .footer a {
@@ -20,6 +25,28 @@
 
 .footer a:hover {
   color: var(--accent);
+}
+
+/* Footer social icons — set apart from the inline icons by using
+   currentColor so they pick up --muted, then ochre on hover. */
+.footer .social-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer .social-icons a {
+  display: inline-flex;
+  color: var(--muted);
+}
+
+.footer .social-icons a:hover {
+  color: var(--accent);
+}
+
+.footer .social-icons svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* Between post entries on listing pages. The hairline rule and the title
