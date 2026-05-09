@@ -49,9 +49,9 @@ buildExpired = false
   [params.assets]
     disableHLJS = true
     disableFingerprinting = false
-    favicon = "/img/favicon.ico"
-    favicon16x16 = "/img/favicon.ico"
-    favicon32x32 = "/img/favicon.ico"
+    favicon = "/favicon.svg"
+    favicon16x16 = "/favicon.svg"
+    favicon32x32 = "/favicon.svg"
     apple_touch_icon = "/img/avatar-icon.png"
 
   [params.profileMode]
