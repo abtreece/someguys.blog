@@ -1,0 +1,167 @@
+/* Hairline rules. Use only as section separators between major regions —
+   not within body content. 1px, low contrast. */
+
+.header {
+  border-bottom: 1px solid var(--rules);
+}
+
+.footer {
+  border-top: 1px solid var(--rules);
+  color: var(--muted);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px var(--entry-inset);
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+/* Footer social icons — set apart from the inline icons by using
+   currentColor so they pick up --muted, then ochre on hover. */
+.footer .social-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer .social-icons a {
+  display: inline-flex;
+  color: var(--muted);
+}
+
+.footer .social-icons a:hover {
+  color: var(--accent);
+}
+
+.footer .social-icons svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Between post entries on listing pages. The hairline rule and the title
+   share a horizontal inset so the rule visually starts where the text
+   starts — not at the column edge. */
+.post-entry {
+  position: relative;
+  background: transparent;
+  padding: 36px var(--entry-inset);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  transition: none;
+}
+
+.post-entry::after {
+  content: "";
+  position: absolute;
+  left: var(--entry-inset);
+  right: var(--entry-inset);
+  bottom: 0;
+  height: 1px;
+  background: var(--rules);
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  border-color: transparent;
+}
+
+.post-entry:last-child::after {
+  display: none;
+}
+
+/* Home-page hero entry. The tagline carries the opening as a display-
+   weight statement; type does the work, no decoration needed. */
+.first-entry {
+  background: transparent;
+  padding: 80px var(--entry-inset) 88px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  position: relative;
+}
+
+.first-entry::after {
+  content: "";
+  position: absolute;
+  left: var(--entry-inset);
+  right: var(--entry-inset);
+  bottom: 0;
+  height: 1px;
+  background: var(--rules);
+}
+
+/* The home hero duplicates the wordmark by default. Suppress the H1 and
+   let the tagline carry the opening, set larger and looser. */
+.first-entry .entry-header h1 {
+  display: none;
+}
+
+.first-entry .entry-content {
+  font-size: 1.4rem;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+  color: var(--content);
+  margin: 0;
+  max-width: 52ch;
+}
+
+.first-entry .entry-content p {
+  margin: 0;
+  font-weight: inherit;
+}
+
+/* Give the post-meta on single posts a touch more breathing room from
+   the H1 above it — currently sits ~4px below the title. */
+.post-single .post-header {
+  margin: 24px auto;
+}
+
+.post-single .post-meta {
+  margin-top: 10px;
+}
+
+/* Horizontal rule in post body — same hairline. */
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--rules);
+  margin: 3em 0;
+}
+
+/* Override PaperMod's default boxy entry style — we want editorial flow. */
+.post-entry .entry-content {
+  color: var(--content);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 8px 0;
+}
+
+.entry-header h2,
+.entry-header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.entry-footer {
+  color: var(--muted);
+  margin-top: 8px;
+}

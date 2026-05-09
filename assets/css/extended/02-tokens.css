@@ -1,0 +1,56 @@
+/* Design tokens. Override PaperMod's variable system to match design-system.md.
+   PaperMod sets defaults at :root (light) and :root[data-theme="dark"] (dark).
+   We re-define both. */
+
+:root {
+  /* Light theme — warm bone background, deep warm near-black text. */
+  --theme: #F5F1EA;
+  --entry: #F5F1EA;
+  --primary: #1A1815;
+  --secondary: #6B6155;
+  --tertiary: #D8CFBE;
+  --content: #1A1815;
+  --code-block-bg: #ECE7DD;
+  --code-bg: #ECE7DD;
+  --border: #D8CFBE;
+  --accent: #A87420;
+  --rules: #D8CFBE;
+  --muted: #6B6155;
+
+  /* Layout — editorial column. 880px lands at ~103ch for Inter at 17px,
+     the upper bound of comfortable prose reading; gives the column real
+     presence on wide displays without sacrificing legibility. */
+  --main-width: 880px;
+  --content-gap: 24px;
+  --gap: 32px;
+  --entry-inset: 28px;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --theme: #15171D;
+  --entry: #1D2028;
+  --primary: #E5E2DC;
+  --secondary: #9A938A;
+  --tertiary: #272A33;
+  --content: #E5E2DC;
+  --code-block-bg: #1D2028;
+  --code-bg: #1D2028;
+  --border: #272A33;
+  --accent: #D4A24E;
+  --rules: #272A33;
+  --muted: #9A938A;
+
+  color-scheme: dark;
+}
+
+/* PaperMod paints the post-listing page with --code-bg by default; on light
+   theme that gives an unwanted grey strip. Force the page background. */
+.list {
+  background: var(--theme);
+}
+
+[data-theme="dark"] .list {
+  background: var(--theme);
+}
