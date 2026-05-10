@@ -5,7 +5,7 @@ date: 2026-05-09
 tags: ["ai", "career"]
 ---
 
-For the past couple of months I've been asking myself whether twenty years of experience still counts for anything, and how I'm supposed to describe the work on my LinkedIn profile if AI is doing all the work. The engineers who don't use AI, or refuse to, aren't helping. "Ask your robot friend." "Is this AI slop?" "Looks vibe coded." Each one is a way of saying the work doesn't count because of how it got done. The shade is loud. The doubt is mine. So this post is me writing my way to an answer.
+For the past couple of months I've been asking myself whether twenty years of experience still counts for anything, and how I'm supposed to describe my work on LinkedIn if AI is doing all the work. The engineers who don't use AI aren't helping. The ones who refuse to aren't either. "Ask your robot friend." "Is this AI slop?" "Looks vibe coded." Each one is a way of saying the work doesn't count because of how it got done. The shade is loud. The doubt is mine. So this post is me writing my way to an answer.
 
 <!--more-->
 
@@ -67,10 +67,10 @@ If you're fifteen, twenty, twenty-five years into your career and you're wonderi
 
 The floor of what any one engineer can ship just went way up. A subscription and a laptop will get you something that runs. The ceiling went up further than that, but only if you've done the unglamorous work of building the judgment that separates "runs" from "runs reliably at peak load during market hours".
 
-Your value didn't decrease. It moved up the stack.
+Your value didn't decrease. It moved up the abstraction stack.
 
 Our job description has changed; HR just doesn't know it. The best move right now is to describe the shift on your own terms. Write the post. Update the headline. Name the work.
 
 Here's mine: I'm a Principal Infrastructure Engineer who orchestrates AI agents to deliver production-grade payment infrastructure at a velocity that was not possible eighteen months ago. The infrastructure problems didn't get easier. The tooling got a lot better. And twenty years of experience is what makes that tooling produce output worth shipping.
 
-I'm convinced, this is the job now.
+I'm convinced. This is the job now.
