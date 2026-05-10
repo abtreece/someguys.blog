@@ -91,3 +91,8 @@ At 2am during an outage, the answer is almost always on somebody's blog: half-fo
     name = "Posts"
     url = "/posts/"
     weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
