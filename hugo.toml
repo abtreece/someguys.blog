@@ -83,8 +83,8 @@ At 2am during an outage, the answer is almost always on somebody's blog: half-fo
     url = "/index.xml"
 
 [[menu.main]]
-    name = "Home"
-    url = "/"
+    name = "About"
+    url = "/about/"
     weight = 1
 
 [[menu.main]]
