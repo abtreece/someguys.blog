@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Twenty years in infrastructure, and the work doesn't look the same anymore
-date: 2026-05-09
+date: 2026-05-12
 tags: ["ai", "career"]
 ---
 
