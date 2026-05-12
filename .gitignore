@@ -2,6 +2,9 @@
 public/
 .hugo_build.lock
 
+# Local design/handoff notes (not deployed)
+docs/
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
