@@ -2,7 +2,6 @@
 layout: post
 title: "I reviewed the code. They wanted it deployed."
 date: 2026-06-18
-draft: true
 tags: ["hiring", "interviews", "judgment", "engineering"]
 ---
 
