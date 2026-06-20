@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting up a Mac to learn Python, the way you'd actually want to
-date: 2026-06-21
+date: 2026-06-19
 tags: ["python", "macos", "pcc-companion", "homebrew"]
 ---
 

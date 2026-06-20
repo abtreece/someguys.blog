@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Installing Python without touching the system Python
-date: 2026-06-28
+date: 2026-06-20
 tags: ["python", "macos", "pcc-companion", "asdf"]
 ---
 
-In the [last post](/posts/2026-06-21-setting-up-a-mac-for-python/) we set up the foundation: the terminal, the Command Line Tools, Homebrew, and a `~/projects` folder for your code. No Python yet. This post installs it, and it's where this series makes its first real departure from the book.
+In the [last post](/posts/2026-06-19-setting-up-a-mac-for-python/) we set up the foundation: the terminal, the Command Line Tools, Homebrew, and a `~/projects` folder for your code. No Python yet. This post installs it, and it's where this series makes its first real departure from the book.
 
 [*Python Crash Course*](https://nostarch.com/python-crash-course-3rd-edition) has you download Python from python.org and double-click an installer. That works, and if you've already done it, nothing here is going to break it. But it leaves you with a single Python wired into your whole machine, and no clean way to keep one project's libraries from leaking into another. We're going to install Python so that you control which version you're running and so that every project gets its own isolated set of packages. It's two tools doing two jobs, and once it's in place you stop thinking about it.
 
