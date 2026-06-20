@@ -45,13 +45,13 @@ Open VS Code, click the Extensions icon in the left sidebar (it looks like four 
 
 This is the step the book doesn't cover, and it's the important one.
 
-Open the project folder you made last post:
+Open one project folder. In the last post we made `~/projects/pcc/python_work` with its own `.venv`, so open that:
 
 ```bash
-code ~/projects/pcc
+code ~/projects/pcc/python_work
 ```
 
-VS Code opens with that folder as your workspace. Because we created a `.venv` inside it, the Python extension will usually detect it and offer to use it. To be sure, or to set it yourself, open the Command Palette with Command-Shift-P, type `Python: Select Interpreter`, and choose the one labeled `('.venv')`. That tells VS Code to use the isolated Python you built for this project, not some other one on the system.
+Open one project folder at a time, not the `~/projects/pcc` container, so VS Code has a single environment to reason about. VS Code opens that folder as your workspace, and because it contains a `.venv`, the Python extension will usually detect it and offer to use it. To be sure, or to set it yourself, open the Command Palette with Command-Shift-P, type `Python: Select Interpreter`, and choose the one labeled `('.venv')`. That tells VS Code to use the isolated Python you built for this project, not some other one on the system.
 
 You'll know it worked in two places. The bottom status bar shows the selected interpreter and its version. And when you open VS Code's integrated terminal (Terminal menu, then New Terminal), the prompt shows `(.venv)` because VS Code activated the environment for you. That second part is the quiet payoff: any `pip install` you run in that terminal lands in the project's environment automatically, with nothing to remember.
 
@@ -69,7 +69,7 @@ The book doesn't mention code formatting, which is understandable for a first pr
 
 Install its extension the same way you installed the Python one: open Extensions, search for `Ruff`, and install the official one, whose id is `charliermarsh.ruff` (Ruff and this extension are made by Astral).
 
-Then tell VS Code to use it for Python files, and to format every time you save. In your project folder, create a file at `.vscode/settings.json` with this:
+Then tell VS Code to use it for Python files and to format every time you save. Because you'll open a different project folder for each part of the book, put this in your User settings so it applies everywhere instead of repeating it in each project. Open the Command Palette with Command-Shift-P, run `Preferences: Open User Settings (JSON)`, and add the `"[python]"` block below (if the file already has settings, place it inside the existing outer braces):
 
 ```json
 {
@@ -84,7 +84,7 @@ Then tell VS Code to use it for Python files, and to format every time you save.
 }
 ```
 
-Because this file lives in the project folder, it applies to this project. From now on, every time you save a Python file, Ruff tidies the formatting, applies safe fixes, and sorts your imports. You write roughly, save, and it comes out clean. For someone relearning the language, that's one less thing to hold in your head while you focus on the actual code.
+Because this lives in your User settings, it applies to every project folder you open. From now on, every time you save a Python file, Ruff tidies the formatting, applies safe fixes, and sorts your imports. You write roughly, save, and it comes out clean. For someone relearning the language, that's one less thing to hold in your head while you focus on the actual code.
 
 ## A couple of things worth grabbing from Appendix B
 
@@ -98,7 +98,7 @@ The other is the keyboard shortcuts, which are worth skimming in Appendix B: com
 
 You're now fully set up to work through *Python Crash Course* in VS Code, with a few things quietly better than the book assumes.
 
-When the book says to run a program with Control-F5, do exactly that. The only difference is that your program runs inside the project's virtual environment instead of a single global Python, which is what you want. When you reach the chapters that install libraries, matplotlib, Django, pygame, open VS Code's integrated terminal and run the `pip install` there. Because VS Code already activated your environment, the libraries land in the right place and the editor immediately knows about them.
+When the book says to run a program with Control-F5, do exactly that. The only difference is that your program runs inside the project's virtual environment instead of a single global Python, which is what you want. When you reach the chapters that install libraries, matplotlib, Django, pygame, open that project's folder in VS Code, then open its integrated terminal and run the `pip install` there. Because VS Code already activated that project's environment, the libraries land in the right place and the editor immediately knows about them.
 
 ## What you've actually done
 
