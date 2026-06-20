@@ -1,0 +1,24 @@
+{{- /*
+  Override of PaperMod's post_nav_links.html to make the direction chronological:
+  "Prev" goes back in time (older post), "Next" goes forward in time (newer post).
+  Hugo's collection methods are inverted from intuition: $pages.Next returns the
+  NEWER page and $pages.Prev the OLDER one, so we map Prev<-$pages.Prev (older)
+  and Next<-$pages.Next (newer), the opposite of the theme default.
+*/ -}}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if and (gt (len $pages) 1) (in $pages . ) }}
+<nav class="paginav">
+  {{- with $pages.Prev . }}
+  <a class="prev" href="{{ .Permalink }}">
+    <span class="title">« {{ i18n "prev_page" }}</span>
+    <span>{{- .Name -}}</span>
+  </a>
+  {{- end }}
+  {{- with $pages.Next . }}
+  <a class="next" href="{{ .Permalink }}">
+    <span class="title">{{ i18n "next_page" }} »</span>
+    <span>{{- .Name -}}</span>
+  </a>
+  {{- end }}
+</nav>
+{{- end }}
