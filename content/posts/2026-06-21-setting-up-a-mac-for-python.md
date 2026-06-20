@@ -17,7 +17,7 @@ A note on who this is for. I'm writing it for someone capable but rusty: maybe y
 
 ## Where the book starts, and where it stops
 
-Here's what *Python Crash Course* tells a Mac reader to do, and it's all reasonable. Check whether you have a recent Python by running `python3`. If it's older than 3.9, download an installer from python.org and run it. Double-click `Install Certificates.command`. Install VS Code and the Python extension. Make a `python_work` folder on your desktop. Run your first program from inside the editor.
+Here's what *Python Crash Course* tells a Mac reader to do, and it's all reasonable. Check whether you have a recent Python by running `python3`. If it's older than 3.9, download an installer from python.org and run it. Install VS Code and the Python extension. Make a `python_work` folder on your desktop. Run your first program from inside the editor.
 
 That gets you to `Hello world!`, and the book is honest that it's the minimum. It says so itself, in passing: after you run your first program, "you'll likely see some additional output showing the Python interpreter that was used," and if you want to clean that up, well, see Appendix B. That's the whole shape of the problem. The real tooling is in the appendices, where a beginner never looks, and the main path optimizes for getting one program to run rather than for the machine you'll be living on for the next year.
 
