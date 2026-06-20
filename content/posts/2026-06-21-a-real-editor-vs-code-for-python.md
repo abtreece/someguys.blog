@@ -11,7 +11,7 @@ So far in this series we set up [the terminal and Homebrew](/posts/2026-06-19-se
 
 ## Where the book starts, and where it stops
 
-Credit where it's due: [*Python Crash Course*](https://nostarch.com/python-crash-course-3rd-edition) recommends VS Code, and it's the right call. VS Code is free, open source, runs everywhere, and is the rare editor that's friendly to a beginner and still used by professionals all day. Chapter 1 has you install it and add the Python extension, and that's genuinely most of the way there.
+Credit where it's due: [*Python Crash Course*](https://nostarch.com/python-crash-course-3rd-edition) recommends VS Code, and it's the right call. VS Code is free, built on an open-source core, runs everywhere, and is the rare editor that's friendly to a beginner and still used by professionals all day. Chapter 1 has you install it and add the Python extension, and that's genuinely most of the way there.
 
 Where it stops is the connecting tissue. The book downloads VS Code from a website; we'll install it with Homebrew, like everything else, so it updates with one command alongside the rest of your tools. The book says VS Code "finds the versions of Python you have installed" and "typically does not require any configuration," which is true for the single global Python it expects you to have. But we did something better in the last post: we gave each project its own virtual environment. VS Code won't use that automatically, and pointing it at the right one is the step that makes everything click. Finally, the book leaves formatting, line-length guides, and the rest of the useful configuration in Appendix B, which a beginner reading front to back won't reach for a long time. We'll set up the parts worth having now.
 
