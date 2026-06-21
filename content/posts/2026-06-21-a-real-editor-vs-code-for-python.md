@@ -13,7 +13,7 @@ So far in this series we set up [the terminal and Homebrew](/posts/2026-06-19-se
 
 Credit where it's due: [*Python Crash Course*](https://nostarch.com/python-crash-course-3rd-edition) recommends VS Code, and it's the right call. VS Code is free, built on an open-source core, runs everywhere, and is the rare editor that's friendly to a beginner and still used by professionals all day. Chapter 1 has you install it and add the Python extension, and that's genuinely most of the way there.
 
-Where it stops is the connecting tissue. The book downloads VS Code from a website; we'll install it with Homebrew, like everything else, so it updates with one command alongside the rest of your tools. The book says VS Code "finds the versions of Python you have installed" and "typically does not require any configuration," which is true for the single global Python it expects you to have. But we did something better in the last post: we gave each project its own virtual environment. VS Code won't use that automatically, and pointing it at the right one is the step that makes everything click. Finally, the book leaves formatting, line-length guides, and the rest of the useful configuration in Appendix B, which a beginner reading front to back won't reach for a long time. We'll set up the parts worth having now.
+Where it stops is the connecting tissue. The book downloads VS Code from a website; we'll install it with Homebrew, like everything else, so it updates with one command alongside the rest of your tools. The book says VS Code "finds the versions of Python you have installed" and "typically does not require any configuration to run your first programs," which is true for the single global Python it expects you to have. But we did something better in the last post: we gave each project its own virtual environment. VS Code won't use that automatically, and pointing it at the right one is the step that makes everything click. Finally, the book leaves formatting, line-length guides, and the rest of the useful configuration in Appendix B, which a beginner reading front to back won't reach for a long time. We'll set up the parts worth having now.
 
 ## Install VS Code with Homebrew
 
@@ -51,7 +51,7 @@ Open one project folder. In the last post we made `~/projects/pcc/python_work` w
 code ~/projects/pcc/python_work
 ```
 
-Open one project folder at a time, not the `~/projects/pcc` container, so VS Code has a single environment to reason about. VS Code opens that folder as your workspace, and because it contains a `.venv`, the Python extension will usually detect it and offer to use it. To be sure, or to set it yourself, open the Command Palette with Command-Shift-P, type `Python: Select Interpreter`, and choose the one labeled `('.venv')`. That tells VS Code to use the isolated Python you built for this project, not some other one on the system.
+Open one project folder at a time, not the `~/projects/pcc` container, so VS Code has a single environment to reason about. VS Code opens that folder as your workspace, and because it contains a `.venv`, the Python extension will usually detect it and offer to use it. To be sure, or to set it yourself, open the Command Palette with Command-Shift-P, type `Python: Select Interpreter`, and choose the one that shows `('.venv')` in its name. That tells VS Code to use the isolated Python you built for this project, not some other one on the system.
 
 You'll know it worked in two places. The bottom status bar shows the selected interpreter and its version. And when you open VS Code's integrated terminal (Terminal menu, then New Terminal), the prompt shows `(.venv)` because VS Code activated the environment for you. That second part is the quiet payoff: any `pip install` you run in that terminal lands in the project's environment automatically, with nothing to remember.
 
@@ -69,7 +69,7 @@ The book doesn't mention code formatting, which is understandable for a first pr
 
 Install its extension the same way you installed the Python one: open Extensions, search for `Ruff`, and install the official one, whose id is `charliermarsh.ruff` (Ruff and this extension are made by Astral).
 
-Then tell VS Code to use it for Python files and to format every time you save. Because you'll open a different project folder for each part of the book, put this in your User settings so it applies everywhere instead of repeating it in each project. Open the Command Palette with Command-Shift-P, run `Preferences: Open User Settings (JSON)`, and add the `"[python]"` block below (if the file already has settings, place it inside the existing outer braces):
+Then tell VS Code to use it for Python files and to format every time you save. Because you'll open a different project folder for each part of the book, put this in your User settings so it applies everywhere instead of repeating it in each project. Open the Command Palette with Command-Shift-P and run `Preferences: Open User Settings (JSON)`. If that file is empty or just `{}`, replace its contents with the block below. If it already has settings, paste only the `"[python]"` entry (everything between the outer braces) inside the existing braces, with a comma after the previous entry:
 
 ```json
 {
