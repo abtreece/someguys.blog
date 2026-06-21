@@ -89,7 +89,7 @@ Authenticate it with your account:
 gh auth login
 ```
 
-This walks you through a few prompts: choose GitHub.com, pick HTTPS when it asks about the protocol, and authenticate in your browser when it opens. It will also offer to create and upload an SSH key for you; say yes, and you've handled the part that a manual setup would make you do by hand.
+This walks you through a few prompts: choose GitHub.com, pick HTTPS when it asks about the protocol, and authenticate in your browser when it opens. When it asks whether to configure git with your GitHub credentials, say yes. From then on, git pushes over HTTPS using the login you just did, with no access token to paste or SSH key to set up by hand. (If you'd rather use SSH, pick that instead and `gh` will offer to generate and upload a key for you; HTTPS is the simpler path to start with.)
 
 **If you've done this before**, this is the mental shift from the centralized version control of an earlier era. If your last serious version control was CVS, Subversion, or Perforce, git is distributed: your commits are complete and local, and pushing to GitHub is a separate, deliberate step rather than the act of committing itself. GitHub is just a place you've agreed to send copies. Nothing forces you to push, which is freeing and occasionally a foot-gun when you forget to.
 
