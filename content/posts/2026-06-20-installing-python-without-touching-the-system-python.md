@@ -82,7 +82,7 @@ asdf list python
 You'll see something like `3.13.2`. Make that version your default everywhere by setting it in your home directory, using the number you just saw:
 
 ```bash
-asdf set --home python 3.13.2
+asdf set --home python 3.13.2   # use the version you installed, not literally this
 ```
 
 The `--home` flag writes the choice to a file in your home folder, so it applies everywhere unless a specific project says otherwise. Now check that it worked:
@@ -105,7 +105,7 @@ Let's set this up the way you'll actually use it through the book. Make one cont
 ```bash
 mkdir -p ~/projects/pcc
 cd ~/projects/pcc
-asdf set python 3.13.2
+asdf set python 3.13.2   # the same version you installed above, not literally this
 ```
 
 That `asdf set` writes a small `.tool-versions` file here, using the version you installed earlier. Because asdf looks up the directory tree, every project folder you create inside `~/projects/pcc` inherits this Python automatically, so you pin it once and never think about it again.
