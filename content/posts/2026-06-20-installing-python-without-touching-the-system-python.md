@@ -82,7 +82,7 @@ asdf list python
 You'll see something like `3.13.2`. Make that version your default everywhere by setting it in your home directory, using the number you just saw:
 
 ```bash
-asdf set --home python 3.13.2
+asdf set --home python 3.13.2   # use the version you installed, not literally this
 ```
 
 The `--home` flag writes the choice to a file in your home folder, so it applies everywhere unless a specific project says otherwise. Now check that it worked:
@@ -100,20 +100,24 @@ asdf decides *which Python* you're running. A virtual environment decides *which
 
 **If you're brand new**, a virtual environment, or "venv," is just a private copy of Python's package area that belongs to one project. When it's active, `pip install` puts libraries there instead of in your global Python, so two projects can depend on different versions of the same library without ever colliding. It's a sandbox, and it's the single most important habit in Python.
 
-Let's make one for your work through the book. Create a project folder under the `~/projects` directory from the last post:
+Let's set this up the way you'll actually use it through the book. Make one container folder to hold all your Python Crash Course work, and pin a Python version for everything inside it:
 
 ```bash
 mkdir -p ~/projects/pcc
 cd ~/projects/pcc
+asdf set python 3.13.2   # the same version you installed above, not literally this
 ```
 
-If you want this folder to always use a specific Python, pin it with asdf. This writes a small `.tool-versions` file in the folder, and anytime you're in it, that version is the one in charge:
+That `asdf set` writes a small `.tool-versions` file here, using the version you installed earlier. Because asdf looks up the directory tree, every project folder you create inside `~/projects/pcc` inherits this Python automatically, so you pin it once and never think about it again.
+
+Now make your first project folder inside that container. The book's early chapters keep their files in a folder called `python_work`, so we'll use the same name:
 
 ```bash
-asdf set python 3.13.2
+mkdir python_work
+cd python_work
 ```
 
-Now create the virtual environment. The convention is to call it `.venv`:
+Create the virtual environment. The convention is to call it `.venv`:
 
 ```bash
 python -m venv .venv
@@ -152,6 +156,24 @@ deactivate
 
 One habit to start now: the `.venv` folder is large and machine-specific, so it should never go into version control. When we get to git a couple of posts from now, we'll add it to a `.gitignore`. The `requirements.txt` file, which is small and portable, is the thing you actually keep.
 
+That `python_work` folder is just the first of several. The book has you create a new directory for each of its larger projects, and you'll make each one inside `~/projects/pcc`, each with its own `.venv`:
+
+- `~/projects/pcc/alien_invasion` for the arcade game (Chapters 12 to 14)
+- `~/projects/pcc/data_visualization` for the charts and API work (Chapters 15 to 17)
+- `~/projects/pcc/learning_log` for the Django web app (Chapters 18 to 20)
+
+The steps are the same every time: make the folder, create a venv, activate it.
+
+```bash
+cd ~/projects/pcc
+mkdir alien_invasion
+cd alien_invasion
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Each project's packages now belong to that project alone. Your pygame game and your Django site never share a library, and you can delete one project's `.venv` and rebuild it from its `requirements.txt` without touching the others. You don't pin Python again in each folder; they all inherit the version you set on `~/projects/pcc`.
+
 ## Never use sudo pip
 
 One rule that will save you a bad afternoon: never run `pip install` with `sudo`. If a command ever fails with a permissions error and the internet suggests adding `sudo`, that's the sign you're trying to install into a Python you don't own, usually the system one. With asdf and a venv, every Python you touch is yours, so you never need elevated permissions to install a package. If you reach for `sudo pip`, stop and check which Python is active instead.
@@ -162,7 +184,13 @@ You're set up to do everything *Python Crash Course* asks, with better tools und
 
 When the book tells you to type `python3 hello_world.py`, you can type `python hello_world.py` instead, or `python3` if you'd rather match the book exactly. Both work now.
 
-For the early chapters, which don't install any outside libraries, you can work right inside `~/projects/pcc` with the venv active and nothing will feel different from the book. When you reach the parts that install packages, matplotlib for the data visualizations, Django for the web app, pygame for the arcade game, do the `pip install` with your venv activated, and those libraries land in the project instead of cluttering your global Python. And when the book finally introduces virtual environments during the Django project, you'll already have been using them for weeks.
+The early chapters install nothing, so you'll work in `~/projects/pcc/python_work` with its venv active and nothing will feel different from the book. The projects are where our approach and the book's diverge in a way worth knowing. To install a package, the book mostly uses a command like `python -m pip install --user pygame`. Drop the `--user` flag. Activate that project's venv and install without it:
+
+```bash
+pip install pygame
+```
+
+The `--user` flag installs into your global Python, the exact clutter a venv exists to prevent, and inside an active venv you never need it. The book only switches to a virtual environment for its Django project in Chapter 18 (it even names one `ll_env`); you'll have been using one for every project since the start, so that step will be something you already do.
 
 ## What you've actually done
 
