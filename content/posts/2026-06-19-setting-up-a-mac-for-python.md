@@ -19,7 +19,7 @@ A note on who this is for. I'm writing it for someone capable but rusty: maybe y
 
 Here's what *Python Crash Course* tells a Mac reader to do, and it's all reasonable. Check whether you have a recent Python by running `python3`. If it's older than 3.9, download an installer from python.org and run it. Install VS Code and the Python extension. Make a `python_work` folder on your desktop. Run your first program from inside the editor.
 
-That gets you to `Hello world!`, and the book is honest that it's the minimum. It says so itself, in passing: after you run your first program, "you'll likely see some additional output showing the Python interpreter that was used," and if you want to clean that up, well, see Appendix B. That's the whole shape of the problem. The real tooling is in the appendices, where a beginner never looks, and the main path optimizes for getting one program to run rather than for the machine you'll be living on for the next year.
+That gets you to `Hello world!`, and the book is honest that it's the minimum. It says so itself, in passing: after you run your first program, you'll likely see "some additional output showing the Python interpreter that was used," and if you want to clean that up, well, see Appendix B. That's the whole shape of the problem. The real tooling is in the appendices, where a beginner never looks, and the main path optimizes for getting one program to run rather than for the machine you'll be living on for the next year.
 
 What Chapter 1 never mentions: how to manage more than one version of Python without making a mess, how to keep each project's libraries from stepping on each other, how to install command-line tools at all, or how to save your work so you can't lose it. Some of that is in the appendices. Most of it we're going to do up front, because it's the part that actually makes the rest easy.
 
@@ -37,7 +37,7 @@ When you open the terminal, the thing reading what you type is called a shell. O
 
 **If you've done this before**, you almost certainly knew bash. The good news is that for everyday interactive use, zsh is bash with the rough edges sanded off. The commands you remember (`cd`, `ls`, `export`, pipes, redirection) all work the same. Your shell configuration lives in `~/.zshrc` now instead of `~/.bashrc`, and tab completion and globbing are smarter, but you are not learning a new language. You're using the one you know, with better defaults.
 
-So why did it change? Apple froze the copy of bash it ships at version 3.2, from 2007, because newer bash uses a license Apple won't distribute. Rather than ship a permanently ancient shell, Apple made zsh the default back in macOS Catalina in 2019. "Use bash instead" on a modern Mac means either living with a shell from 2007 or installing a newer one and fighting every default that assumes zsh. It isn't worth it.
+So why did it change? Apple froze the copy of bash it ships at version 3.2, from 2006, because newer bash uses a license Apple won't distribute. Rather than ship a permanently ancient shell, Apple made zsh the default back in macOS Catalina in 2019. "Use bash instead" on a modern Mac means either living with a shell from 2006 or installing a newer one and fighting every default that assumes zsh. It isn't worth it.
 
 The practical advice is the easiest advice: use the default, don't treat it as something to study. And one thing not to do yet: do not install oh-my-zsh or any plugin framework on day one. That's how people lose an afternoon and end up with a slow shell full of features they don't understand. The shell as it ships is good. Come back to that when you have an itch to scratch, not before.
 
@@ -69,7 +69,7 @@ Install it by pasting this single line into the terminal and pressing Return. It
 
 It will explain what it's about to do and ask for your Mac password. When you type the password you won't see anything appear, no dots, no asterisks. That's normal, it's just hidden. Type it and press Return.
 
-When it finishes, it prints a short "Next steps" section, and on an Apple Silicon Mac (any M-series machine, which is all of them now) it tells you to run two more lines. This step matters: it's how your shell learns where Homebrew put things. Skip it and the `brew` command appears to vanish every time you open a new terminal. Run these:
+When it finishes, it prints a short "Next steps" section, and on an Apple Silicon Mac (any M-series machine, which a new MacBook Air is) it tells you to run a few more commands. This step matters: it's how your shell learns where Homebrew put things. Skip it and the `brew` command appears to vanish every time you open a new terminal. Run these:
 
 ```bash
 echo >> ~/.zprofile
