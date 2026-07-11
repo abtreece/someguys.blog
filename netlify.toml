@@ -15,6 +15,19 @@ command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 [context.branch-deploy]
 command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
+# Plausible analytics proxy (first-party paths to avoid ad-block filtering)
+[[redirects]]
+from = "/sg/js/script.js"
+to = "https://plausible.io/js/pa-BimJpMh7vl8AK95W2Axub.js"
+status = 200
+force = true
+
+[[redirects]]
+from = "/sg/api/event"
+to = "https://plausible.io/api/event"
+status = 200
+force = true
+
 # Security headers
 [[headers]]
 for = "/*"
